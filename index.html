@@ -1,41 +1,86 @@
-<!DOCTYPE html>
 <html>
-<head>
-  <title>The Great Hot Chocolate Survey</title>
-  <link rel="stylesheet" href="style.css">
-</head>
+<style>
+body {
+   font-family: Arial, sans-serif;
+}
+
+.chocolate-survey {
+   text-align: center;
+   font-size: 3em;
+   color: #333;
+}
+
+.survey-form {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-around;
+   margin: 2em;
+}
+
+.survey-form > div {
+   width: 30%;
+   background-color: #e0e0e0;
+   padding: 1em;
+   margin: 1em;
+   border-radius: 1em;
+}
+
+.survey-form > div > input {
+   width: 100%;
+   font-size: 1.5em;
+}
+
+.survey-form > div > input[type="submit"] {
+   background-color: #333;
+   color: #fff;
+   padding: 0.5em;
+   border: none;
+   border-radius: 1em;
+   cursor: pointer;
+}
+
+.survey-form > div > input[type="submit"]:hover {
+   background-color: #666;
+}
+</style>
 <body>
-  <div class="survey-container">
-    <h1>The Great Hot Chocolate Survey</h1>
-    <div class="form-group">
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" placeholder="Enter your name">
-    </div>
-    <div class="form-group">
-      <label for="restaurant">Restaurant:</label>
-      <input type="text" id="restaurant" name="restaurant" placeholder="Enter the restaurant name">
-    </div>
-    <div class="slider-group">
-      <label for="richness">Richness:</label>
-      <input type="range" id="richness" name="richness" min="0" max="10" value="5">
-    </div>
-    <div class="slider-group">
-      <label for="sweetness">Sweetness:</label>
-      <input type="range" id="sweetness" name="sweetness" min="0" max="10" value="5">
-    </div>
-    <div class="slider-group">
-      <label for="temperature">Temperature:</label>
-      <input type="range" id="temperature" name="temperature" min="0" max="10" value="5">
-    </div>
-    <div class="slider-group">
-      <label for="chocolateyness">Chocolateyness:</label>
-      <input type="range" id="chocolateyness" name="chocolateyness" min="0" max="10" value="5">
-    </div>
-    <div class="slider-group">
-      <label for="bitterness">Bitterness:</label>
-      <input type="range" id="bitterness" name="bitterness" min="0" max="10" value="5">
-    </div>
-    <button type="submit" class="submit-button">Submit</button>
-  </div>
+   <div class="chocolate-survey">
+       <h1>The great hot chocolate survey</h1>
+       <form class="survey-form">
+           <div class="name">
+               <h2>name</h2>
+               <input type="text" id="name" name="name">
+           </div>
+           <div class="restaurant">
+               <h2>resturant</h2>
+               <input type="text" id="restaurant" name="restaurant">
+           </div>
+           <div class="temperature">
+               <h2>temperature</h2>
+               <input type="range" id="temperature" name="temperature" min="1" max="10">
+           </div>
+           <div class="chocolate-type">
+               <h2>chocolate type</h2>
+               <input type="radio" id="milk" name="chocolate" value="milk">
+               <label for="milk">Milk</label>
+               <input type="radio" id="dark" name="chocolate" value="dark">
+               <label for="dark">Dark</label>
+               <input type="radio" id="white" name="chocolate" value="white">
+               <label for="white">White</label>
+           </div>
+           <div class="bitterness">
+               <h2>bitterness</h2>
+               <input type="range" id="bitterness" name="bitterness" min="1" max="10">
+           </div>
+           <div class="sweetness">
+               <h2>sweetness</h2>
+               <input type="range" id="sweetness" name="sweetness" min="1" max="10">
+           </div>
+           <div class="submit">
+               <h2>submit</h2>
+               <input type="submit" value="submit">
+           </div>
+       </form>
+   </div>
 </body>
 </html>
